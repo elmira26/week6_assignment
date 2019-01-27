@@ -13,6 +13,7 @@ p{
 h2{
 	text-align: right;
 	margin-right: 350px;
+	margin-left: 550px;
 	height: 20px;
 	margin-top: 30px;
 	
@@ -43,24 +44,24 @@ body{
   width: 500px;
   height: 650px;
   overflow: hidden;
-  background: #009bd0;
-  box-shadow: 0 -200px 200px -250px #ffb62a inset;
-  animation: sky-change 10s infinite linear;
+  background: #4695A5;
+  box-shadow: 0 -200px 200px -250px #ff3f00 inset;
+  animation: sky-change 13s infinite linear;
   }
 	@keyframes sky-change {
   0% {
     background: #00609d;
   }
   50% {
-    background: skyblue;
-    box-shadow: 0 -100px 200px -250px #ff6a00  inset;
+    background: #e8b6ae;
+    box-shadow: 0 -100px 200px -250px #ff3f00  inset;
   }
   85% {
     background: #4695A5;
     box-shadow: 0 -100px 200px -250px  #001f43 inset;
   }
   100% {
-    background: #001f43;
+    background: #00609d;
   }
 }
 
