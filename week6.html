@@ -8,20 +8,21 @@
     <script type="text/javascript" src="jquery.date_input.js"></script>
     <script type="text/javascript">$($.date_input.initialize);</script>
 	<script type="text/javascript">
-		var re = /^[a-zA-Z]+$/;
-		function formCheck(){
-			var a = document.getElementById("field").value;
-			var b = document.getElementById("lname").value;
-			var c = document.getElementById("birth").value;
-			var d = document.getElementById("time").value;
-			var e = document.getElementById("tel").value;
-			if ( a == "" || b == "" || c == "" || d == "" || e == "" || !re.test(a)){
-				alert( " fill in all the fields ");
-				return false;
-				
+		
+		function nameFunction(){
+			var letters = document.getElementById("field").value;
+			var re = /^[a-zA-Z]+$/;
+			if(!re.test(letters)){
+				document.getElementById("message").innerHTML = " error: letters only ";
+                form.fname.focus();
+                return false;
 			}
-			
+			else {
+				document.getElementById("message").innerHTML = " ok ";
+			}
+			 
 		}
+		
 		function numFunction(){
 			var tel = document.getElementById("tel").value;
 			var num = /^[0-9]{11}$/;
@@ -32,20 +33,22 @@
 				document.getElementById("msg").innerHTML = " try again ";
 			}
 		}
-		function myFunction(){
-			var letters = document.getElementById("field").value;
-			var lett = document.getElementById("lname").value;
-			var re = /^[a-zA-Z]+$/;
-			if(!re.test(letters)){
-				document.getElementById("message").innerHTML = " error: letters only ";
-                form.fname.focus();
-                return false;
+		function formCheck(){
+			var a = document.getElementById("field").value;
+			var b = document.getElementById("lname").value;
+			var c = document.getElementById("birth").value;
+			var d = document.getElementById("time").value;
+			var e = document.getElementById("tel").value;
+			var le = /^[a-zA-Z]+$/;
+			var nu = /^[0-9]{11}$/;
+            if ( a == "" || b == "" || c == "" || d == "" || e == "" || !le.test(a) || !nu.test(e)){
+				alert( " fill in all the fields ");
+				return false;
+				
 			}
-			else {
-				document.getElementById("messageTwo").innerHTML = " ok ";
-			}
-			 
+			
 		}
+		
 	</script>
 </head>
 <body>
@@ -57,11 +60,11 @@
 	<form action="#" autocomplete="on" >
 		
 		First name<br>
-		<input type="text" name="fname" id="field" onblur="myFunction()" size="40">
+		<input type="text" name="fname" id="field" onblur="nameFunction()" size="40">
 		<span id="message" style="text-align: right; color:black; "></span><br>
 		
 		Last name<br>
-		<input type="text" name="lname" id="lname" size="40" onblur="myFunction()">
+		<input type="text" name="lname" id="lname" size="40" >
 		<span id="messageTwo" style="text-align: right: color:black; "</span><br>
 		
 		Date of birth<br>
