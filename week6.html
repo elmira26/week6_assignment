@@ -51,13 +51,14 @@
 		
 	</script>
 </head>
-<body>
+<body >
 	<h2>Welcome everyone</h2>
 	<p>My form purpose for any user who would like to make an appointment to the doctor.Imagine you want to visit some doctor and schedule the meeting via web site.<br>
-		<p>Here i got 3 functions to form validation. You can try this out. First : work if the First name  input not a letters (onblur). Second: work to check if telephone is a numbers(onblur). Third: full form input validation if any of fields empty. Also it is pop up an alert if the first name have a mistake  and but full form being field in. Try this out ;) </p>
+		<br>
+		Here i got 3 functions to form validation.<em> First</em> : work if the "First name" input not a letters (action onblur).<em> Second </em>: to check if "telephone" is a numbers(action onblur). <em> Third </em>: full form input validation . Reviewing if any of fields are empty. Also it is pop up an alert if the "first name" and "Telephone number" have a mistake while rest of the form being field in.(action onclick button) Try this out ;) 
 		 </p>
-	<div id="form">
-	<form action="#" autocomplete="on" >
+		   <div class="stage">
+        <form action="#" autocomplete="on" >
 		
 		First name<br>
 		<input type="text" name="fname" id="field" onblur="nameFunction()" size="40">
@@ -76,7 +77,7 @@
 		<input type="text" name="quantity" id="tel" size="30" onblur="numFunction();" placeholder=" 8(xxx) xxx xxx xxx "style="background-color: #d6e0e6; height: 20px;">
 		<span id="msg" style="text-align: right; color:black; "></span><br>
 
-		I'm sitizen of my country<br>
+		I'm citizen of my country<br>
 		<input type="checkbox" name="skills" value="yes"><br>
 		<input type="button" name="button" value="Send" onclick="return formCheck()" >
      

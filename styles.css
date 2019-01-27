@@ -5,45 +5,73 @@ p{
     height:200px;
     float: right;
     margin-right: 300px;
-    letter-spacing: 2px;
+    margin-top: 0px;
+    letter-spacing: 3px;
     padding-top: 15px;
 
 }
 h2{
 	text-align: right;
 	margin-right: 350px;
-	height: 40px;
-	margin-top: 20px;
+	height: 20px;
+	margin-top: 30px;
 	
 }
 body{
 	background-color: #5389a6;
 	background-image: url("78294.jpg");
-	background-repeat: repeat-y;
-	background-position: right top;
+    background-repeat: repeat-y;
+    background-position: right top;
+    background-attachment: fixed;
 	margin-right: 50px;
-	background-attachment: fixed;
 	font-size: 20px;
+} 
 
-}
-#form{
-	background-color: #a6dcee;
-	width: 500px;
-	height: 600px;
-	margin:20px;
-	border-radius: 15px;
-	color:white;
-	position: relative;
 
-	
+.stage {
+  background-color: #a6dcee;	
+  box-sizing: border-box;
+  width: 400px;
+  height: 500px;
+  margin-left:10px;
+  margin-top: 0px;
+  padding-top: 5px;
+  border-radius: 15px;
+ 
+ 
+  position: absolute;
+  width: 500px;
+  height: 650px;
+  overflow: hidden;
+  background: #009bd0;
+  box-shadow: 0 -200px 200px -250px #ffb62a inset;
+  animation: sky-change 10s infinite linear;
+  }
+	@keyframes sky-change {
+  0% {
+    background: #00609d;
+  }
+  50% {
+    background: skyblue;
+    box-shadow: 0 -100px 200px -250px #ff6a00  inset;
+  }
+  85% {
+    background: #4695A5;
+    box-shadow: 0 -100px 200px -250px  #001f43 inset;
+  }
+  100% {
+    background: #001f43;
+  }
 }
+
 form{
 	box-sizing: border-box;
 	position: absolute;
-	width: 370px;
-    height: 600px;
-	margin-left: 80px;
+	width: 400px;
+    height: 800px;
+	margin-left: 20px;
 	margin-top: 30px;
+	padding: 30px;
 	text-align: left;
 	letter-spacing: 2px;
 	float: left;
@@ -56,6 +84,7 @@ input{
 	height: 20px;
 	background-color: #e8ebea;
 	margin-bottom: 10px;
+
 	
 }
 
